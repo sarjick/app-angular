@@ -1,0 +1,28 @@
+<div class="page-workouts">
+    <a href="#" data-toggle="modal" data-target="#editTime">Edit Time : {{workout.startTime}}</a>
+
+    <!-- Modal -->
+    <div id="editTime" class="modal hide fade modal-workout-editor np-bootstrap-dialog">
+        <div class="modal-header">
+            <h3 id="myModalLabel">Edit</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-inline" name="form">
+                <div class="control-group">
+                    <div class="controls">
+                        <label for="startTime" class="control-label">Time</label>
+                        <input class="input-medium time-picker np-validate-time-value" id="startTime" name="startTime" type="text" required ng-model="workout.startTime">
+                        <div class="radio-group-column">
+                            <input type="radio" id="time-12" name="time-format" value="12" ng-model="workout.timeFormat" /><label class="label-inline" for="time-12">12 hr</label>
+                            <input type="radio" id="time-24" name="time-format" value="24" ng-model="workout.timeFormat" /><label class="label-inline" for="time-24">24 hr</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-buttons clearfix">
+            <button class="dark-gray-button modal-button" data-dismiss="modal" aria-hidden="true">SAVE</button>
+        </div>
+    </div>
+    <!-- end of Modal -->
+</div>
